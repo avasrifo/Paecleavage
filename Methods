@@ -1,0 +1,9 @@
+Degradome sequencing
+
+Total RNA from worms exposed to P. aeruginosa PA14 for 24 h was isolated using guanidinium thiocyanate with phenol-chloroform and ethanol precipitation. A non-phosphorylated linker RNA was ligated to the RNA 5’ termini using T4 RNA ligase 1. Ligated RNA was reverse transcribed using a DNA adaptor primer (carrying a 8 nucleotide randomer) and Superscript III reverse transcriptase (ThermoFischer). cDNA was treated with RNAse A and H, then second strand synthesis was conducted with a primer complementary to the 5’ linker sequence and Q5 high fidelity DNA polymerase (NEB). The 300-500 bp fragment range of the obtained dsDNA was selected on an agarose gel and purified. The obtained DNA was PCR amplified for 12 rounds and then subjected to Illumina sequencing (Amplicon-EZ service, Genewiz).
+
+Analysis of degradome sequencing data
+
+Sequencing reads from the degradome libraries were filtered for the presence of a complete 5’ adaptor sequence (5’-TCTACAGTCCGACGATCTGAC) using the tool ‘cutadapt’. The read’s 3’ adaptor was similarly trimmed. The filtered reads were then mapped to the C. elegans rRNAs using the ‘BWA’ software [46].
+Reads with identical 5' terminus were counted altogether in order to determine the corresponding 5' terminus frequency. The number of total reads mapped to each rRNA species (18S, 26S, 5.8S or 5S) was used to normalize the 5' termini frequency relative to one million reads. For the two sequencing libraries, a similar number of reads were mapped to the 26S rRNA (49491 for the library of PA14-exposed worms and 33777 for the library of HB101-exposed worms. For the 26S-mapped reads an outlier 'background' line was established, the line separates the 0.7% of reads with the highest counts. The identified 26S 5’ termini are reported on S4 Table of the manuscript.
+
